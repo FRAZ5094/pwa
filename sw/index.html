@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>
+      SW example
+    </title>
+    <body>
+      <script>
+        if ("serviceWorker" in navigator){
+                  navigator.serviceWorker.register("./serviceworker.js").then((resp)=> {console.warn("resp",resp)}).catch((e)=>{console.error(e)});
+
+        }else{
+          console.error("sw not working");
+        }
+
+      </script>
+    </body>
+  </head>
+</html>
